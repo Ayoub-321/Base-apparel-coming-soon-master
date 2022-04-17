@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+/* variables */
+
+:root {
+    font-size: 16px;
+
+    /* Primary */
+    --Desaturated-Red: hsl(0, 36%, 70%);
+    --Soft-Red: hsl(0, 93%, 68%);
+
+    /* Neutral */
+    --Dark-Grayish-Red: hsl(0, 6%, 24%);
+
+  }
+
+/* defaults */
+  *,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+    background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+}
+
+.container {
+    display: flex;
+}
+
+.content {
+    width: 100%;
+}
+
+.logo {
+    height: 80px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.logo img {
+    cursor: pointer;
+    margin-left: 30px;
+    width: 100px;
+}
+
+.cover-mobile img {
+    display: block;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.cover-desktop {
+    display: none;
+}
+
+.info {
+    text-align: center;
+    width: 80%;
+    margin: auto;
+}
+
+.info .title span {
+    display: block;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 2.5rem;
+    letter-spacing: 0.5rem;
+    color: var(--Dark-Grayish-Red);
+}
+
+.info .title span:first-child {
+    font-weight: 300;
+    color: var(--Desaturated-Red);
+}
+
+.info p {
+    margin-top: 20px;
+    text-align: center;
+    justify-content: center;
+    color: var(--Desaturated-Red);
+    line-height: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.subscribe {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    height: 40px;
+    border: 1px solid hsl(0, 28%, 71%);
+    border-radius: 40px;
+}
+
+.subscribe input {
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    padding-left: 15px;
+    color: var(--Desaturated-Red);
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.subscribe input:focus, .subscribe button:hover {
+    outline: none;
+}
+
+.subscribe input::placeholder {
+    color: hsl(0, 36%, 70%);
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.subscribe button {
+    background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    border-radius: 40px;
+    padding: 0 30px;
+    border: none;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media only screen and (max-width: 400px) {}
+
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+    
+}
+
+@media only screen and (min-width: 961px) {
+    /*  Container  */
+
+    .container {
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .content {
+        width: 60%;
+        padding: 0 12%;
+    }
+
+    /*  Logo  */
+
+    .logo img {
+        margin-left: 0;
+    }
+
+    /*  Cover Image  */
+
+    .cover-mobile {
+        display: none;
+    }
+
+    .cover-desktop {
+        display: block;
+        width: 40%;
+    }
+
+    /*  Info  */
+
+    .info {
+        margin-top: 80px;
+        width: 100%;
+        text-align: start;
+    }
+
+    .info p {
+        text-align: start;
+    }
+}
